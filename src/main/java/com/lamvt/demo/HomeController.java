@@ -8,6 +8,6 @@ public class HomeController {
 
     @GetMapping("/")
     public String getStatus(){
-        return "The server is up and running";
+        return "Say hello from Vo Truong Lam";
     }
 }
