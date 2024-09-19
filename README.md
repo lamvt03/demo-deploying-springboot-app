@@ -20,8 +20,8 @@ EXPOSE 8080
 CMD ["java", "-jar", "demo.jar"]
 ```
 
-### Run Stage
-```docker-compose.myl
+### Define docker-compose.yml
+```
 version: '3.9'
 
 services:
@@ -34,7 +34,7 @@ services:
       APP_AUTHOR: Vo Truong Lam
 ```
 
-### CMD
+### Execute Docker-compose
 ```
 docker-compose up --build
 ```
