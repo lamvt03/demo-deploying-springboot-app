@@ -31,10 +31,19 @@ services:
     ports:
       - "8080:8080"
     environment:
-      APP_AUTHOR: Vo Truong Lam
+      APP_AUTHOR: ${APP_AUTHOR}
+```
+
+### Define .env
+```
+APP_AUTHOR=Vo Truong Lam
 ```
 
 ### Execute Docker-compose
 ```
 docker-compose up --build
 ```
+
+# Result
+
+![img.png](demo/img.png)
