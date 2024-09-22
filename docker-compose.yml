@@ -1,10 +1,20 @@
 version: '3.9'
 
 services:
-  app:
-    container_name: demo-spring-boot
+  spring-boot:
     build: .
     ports:
       - "8080:8080"
     environment:
       APP_AUTHOR: ${APP_AUTHOR}
+  nginx:
+    image: nginx:latest
+    ports:
+      - "443:443"
+      - "80:80"
+    volumes:
+      - ./nginx/moviex.conf:/etc/nginx/nginx.conf
+      - ./nginx/ssl/certificate.crt:/etc/nginx/ssl/certificate.crt
+      - ./nginx/ssl/private.key:/etc/nginx/ssl/private.key
+    depends_on:
+      - spring-boot
