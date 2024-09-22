@@ -13,5 +13,7 @@ services:
       - "80:80"
     volumes:
       - ./nginx/moviex.conf:/etc/nginx/nginx.conf
+      - ./nginx/ssl/certificate.crt:/etc/nginx/ssl/certificate.crt
+      - ./nginx/ssl/private.key:/etc/nginx/ssl/private.key
     depends_on:
       - spring-boot
