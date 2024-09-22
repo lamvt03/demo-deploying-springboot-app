@@ -10,6 +10,7 @@ services:
   nginx:
     image: nginx:latest
     ports:
+      - "443:443"
       - "80:80"
     volumes:
       - ./nginx/moviex.conf:/etc/nginx/nginx.conf
