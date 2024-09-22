@@ -8,8 +8,10 @@ services:
     environment:
       APP_AUTHOR: ${APP_AUTHOR}
   nginx:
-    build: ./nginx
-    depends_on:
-      - spring-boot
+    image: nginx:latest
     ports:
       - "80:80"
+    volumes:
+      - ./nginx/moviex.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - spring-boot
