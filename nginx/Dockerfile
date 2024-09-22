@@ -1,3 +1,3 @@
 FROM nginx:latest
 
-COPY ./moviex.conf /etc/nginx/sites-available/moviex.conf
+COPY ./moviex.conf /etc/nginx/nginx.conf
